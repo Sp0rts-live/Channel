@@ -43,15 +43,15 @@
             });
         });
 
-        // Auto-refresh ads every 15 seconds
-        function refreshAds() {
-            document.getElementById("ad-top").innerHTML = "Ad Banner (Top) - Refreshed";
-            document.getElementById("ad-bottom").innerHTML = "Ad Banner (Bottom) - Refreshed";
-            document.getElementById("ad-side-left").innerHTML = "Ad - Refreshed";
-            document.getElementById("ad-side-right").innerHTML = "Ad - Refreshed";
-            document.getElementById("ad-large-bottom").innerHTML = "Ad (Large) - Refreshed";
-        }
-        setInterval(refreshAds, 15000); // Refresh ads every 15 seconds
+        <script>
+    if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        let meta = document.createElement("meta");
+        meta.name = "viewport";
+        meta.content = "width=1024";
+        document.getElementsByTagName("head")[0].appendChild(meta);
+    }
+</script>
+
     </script>
     <style>
         body {
