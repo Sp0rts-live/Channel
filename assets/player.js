@@ -1,23 +1,39 @@
-// Securely fetch M3U8 URL (this should be replaced by a backend call)
-async function getStreamUrl() {
-    return "https://your-m3u8-url-here"; // Replace dynamically per page
-}
-
 document.addEventListener("DOMContentLoaded", async () => {
-    const url = await getStreamUrl();
-    var player = jwplayer("player-container");
-    player.setup({
-        file: url,
-        width: "100%",
-        stretching: "exactfit",
-        type: "hls",
-        autostart: "true",
-        mute: "false",
-        primary: "html5",
-        logo: {
-            file: "",
-            hide: "false",
-            position: "top-right",
+    const urlParams = new URLSearchParams(window.location.search);
+    const streamId = urlParams.get("id");
+
+    if (!streamId) {
+        document.getElementById("player-container").innerHTML = "<p>Error: No stream ID provided.</p>";
+        return;
+    }
+
+    try {
+        const response = await fetch(`/backend/getStream.php?id=${streamId}`);
+        const data = await response.json();
+
+        if (data.error) {
+            document.getElementById("player-container").innerHTML = "<p>Error: Invalid stream.</p>";
+            return;
         }
-    });
+
+        var player = jwplayer("player-container");
+        player.setup({
+            file: data.url,
+            width: "100%",
+            stretching: "exactfit",
+            type: "hls",
+            autostart: "true",
+            mute: "false",
+            primary: "html5",
+            logo: {
+                file: "",
+                hide: "false",
+                position: "top-right",
+            }
+        });
+
+    } catch (error) {
+        console.error("Failed to load stream:", error);
+        document.getElementById("player-container").innerHTML = "<p>Error: Could not load stream.</p>";
+    }
 });
