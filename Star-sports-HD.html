@@ -19,29 +19,7 @@
             }
         });
 
-        // Securely fetch M3U8 URL
-        async function getStreamUrl() {
-            return "https://vkvsd211.okcdn.ru/cmaf/7891679513319/sig/PwI_K81MN38/expires/1741589760383/srcIp/35.179.103.92/urls/45.136.20.37/clientType/13/srcAg/CHROME/mid/9436825660391/get/hls_9436825660391.6YZGazrjivI.m3u8"; // Replace with backend call
-        }
-
-        document.addEventListener("DOMContentLoaded", async () => {
-            const url = await getStreamUrl();
-            var player = jwplayer("player-container");
-            player.setup({
-                file: url,
-                width: "100%",
-                stretching: "exactfit",
-                type: "hls",
-                autostart: "true",
-                mute: "false",
-                primary: "html5",
-                logo: {
-                    file: "",
-                    hide: "false",
-                    position: "top-right",
-                }
-            });
-        });
+        
 
       <script type="text/javascript">
         jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
@@ -50,7 +28,7 @@
             aspectratio: '16:9',
             width: '100%',
             autostart: true,
-            image: 'https://mma.prnewswire.com/media/1919551/WillowTV_Logo.jpg?p=facebook',
+            image: '',
             mute: false,
             preload: 'auto',
             captions: { color: 'white', fontSize: '16px', backgroundOpacity: 0 },
