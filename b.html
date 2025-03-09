@@ -39,7 +39,8 @@
         }
 
         document.addEventListener("DOMContentLoaded", () => {
-            loadHTML("ads-container", "ads.html");
+            <iframe src="ads.html" width="100%" height="500" style="border:none;" id="ads-frame"></iframe>
+
             loadHTML("telegram-container", "telegram.html", async () => {
                 const url = await getStreamUrl();
                 var player = jwplayer("player-container");
