@@ -39,7 +39,36 @@
         }
 
         document.addEventListener("DOMContentLoaded", () => {
-            <iframe src="ads.html" width="100%" height="500" style="border:none;" id="ads-frame"></iframe>
+            <iframe src="" width="100%" height="500" style="border:none;" id="ads-frame"></iframe>
+function loadHTML(ads-containe, ads.html) {
+    fetch(ads.html)
+        .then(response => response.text())  // Get HTML content as text
+        .then(data => {
+            // Inject the fetched HTML into the page
+            document.getElementById(elementId).innerHTML = data;
+
+            // Extract all script tags from the loaded HTML
+            let scripts = document.getElementById(elementId).getElementsByTagName("script");
+
+            // Loop through each script and execute it manually
+            for (let i = 0; i < scripts.length; i++) {
+                let newScript = document.createElement("script");
+
+                // If the script has a 'src' attribute (external script), copy it
+                if (scripts[i].src) {
+                    newScript.src = scripts[i].src;
+                    newScript.async = true; // Load script asynchronously
+                } else {
+                    // Otherwise, copy inline script content
+                    newScript.textContent = scripts[i].textContent;
+                }
+
+                // Append the script to the document body (executes it)
+                document.body.appendChild(newScript);
+            }
+        })
+        .catch(error => console.error(`Error loading ${fileName}:`, error));
+}
 
             loadHTML("telegram-container", "telegram.html", async () => {
                 const url = await getStreamUrl();
