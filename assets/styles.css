@@ -133,6 +133,12 @@ body {
     gap: 10px; /* Adds space between Left_AD_2 and Left_AD_3 */
 }
 
+.right_ad-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adds space between Left_AD_2 and Left_AD_3 */
+}
+
 .ad1 {
     width: 305px;
     height: 285px;
