@@ -185,7 +185,7 @@ body {
 
 .top-banner-ad {
     width: 728px;
-    height: 90px;
+    height: 100px;
     background: #333;
     color: white;
     display: flex;
@@ -198,7 +198,7 @@ body {
 
 .bottom-banner-ad {
     width: 728px;
-    height: 100px;
+    height: 120px;
     background: #333;
     color: white;
     display: flex;
@@ -207,6 +207,7 @@ body {
     border: 2px solid #ff9800;
     border-radius: 5px;
     margin: 10px 0;
+    margin-top: 20px
 }
 
 .bottom-bigg-ad {
