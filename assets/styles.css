@@ -153,8 +153,8 @@ body {
 }
 
 .ad3 {
-    width: 160px;
-    height: 300px;
+    width: 165px;
+    height: 305px;
     background: #333;
     color: white;
     display: flex;
@@ -185,7 +185,7 @@ body {
 
 .top-banner-ad {
     width: 728px;
-    height: 100px;
+    height: 95px;
     background: #333;
     color: white;
     display: flex;
@@ -197,17 +197,16 @@ body {
 }
 
 .bottom-banner-ad {
-    width: 728px;
-    height: 120px;
+    width: 732px;
+    height: 125px;
     background: #333;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid #ff9800;
-    border-radius: 5px;
-    margin: 10px 0;
-    margin-top: 20px
+    border-radius: 5px 5px 0px 0px;
+    margin: 20px 0;
 }
 
 .bottom-bigg-ad {
