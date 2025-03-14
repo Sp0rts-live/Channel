@@ -127,6 +127,12 @@ body {
     max-width: 1200px;
 }
 
+.ad-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adds space between Left_AD_2 and Left_AD_3 */
+}
+
 .ad1 {
     width: 305px;
     height: 285px;
@@ -140,8 +146,8 @@ body {
     margin: 10px;
 }
 .ad2 {
-    width: 150px;
-    height: 400px;
+    width: 130px;
+    height: 250px;
     background: #333;
     color: white;
     display: flex;
@@ -177,7 +183,18 @@ body {
     border-radius: 5px;
     margin: 20px 10px;
 }
-
+.ad5 {
+    width: 325px;
+    height: 110px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    margin: 20px 10px;
+}
 .main-content {
     flex-grow: 1;
     max-width: 728px;
