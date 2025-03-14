@@ -166,8 +166,8 @@ body {
 }
 
 .ad4 {
-    width: 300px;
-    height: 250px;
+    width: 305px;
+    height: 255px;
     background: #333;
     color: white;
     display: flex;
@@ -198,7 +198,7 @@ body {
 
 .bottom-banner-ad {
     width: 732px;
-    height: 125px;
+    height: 200px;
     background: #333;
     color: white;
     display: flex;
