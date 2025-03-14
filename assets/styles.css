@@ -142,19 +142,19 @@ body {
     align-items: center;
     justify-content: center;
     border: 2px solid #ff9800;
-    border-radius: 5px;
     margin: 10px;
+    border-radius: 5px 5px 0px 0px;
 }
 .ad2 {
-    width: 130px;
-    height: 250px;
+    width: 135px;
+    height: 275px;
     background: #333;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid #ff9800;
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
     margin: 10px;
 }
 
@@ -185,7 +185,7 @@ body {
 }
 .ad5 {
     width: 325px;
-    height: 110px;
+    height: 135px;
     background: #333;
     color: white;
     display: flex;
@@ -194,6 +194,7 @@ body {
     border: 2px solid #ff9800;
     border-radius: 5px;
     margin: 20px 10px;
+    border-radius: 5px 5px 0px 0px;
 }
 .main-content {
     flex-grow: 1;
