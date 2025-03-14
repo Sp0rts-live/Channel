@@ -136,7 +136,7 @@ body {
 .right_ad-container {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Adds space between Left_AD_2 and Left_AD_3 */
+    gap: 4px; /* Adds space between Left_AD_2 and Left_AD_3 */
 }
 
 .ad1 {
@@ -167,6 +167,19 @@ body {
 .ad3 {
     width: 165px;
     height: 305px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.ad3 {
+    width: 165px;
+    height: 605px;
     background: #333;
     color: white;
     display: flex;
