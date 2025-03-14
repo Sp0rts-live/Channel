@@ -127,7 +127,7 @@ body {
     max-width: 1200px;
 }
 
-.ad-container {
+.left_ad-container {
     display: flex;
     justify-content: center;
     gap: 10px; /* Adds space between Left_AD_2 and Left_AD_3 */
